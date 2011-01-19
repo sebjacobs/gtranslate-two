@@ -1,6 +1,6 @@
 = gtranslate-two
 
-Description goes here.
+Something funny.
 
 == Contributing to gtranslate-two
  

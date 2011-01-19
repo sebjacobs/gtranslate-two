@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "gtranslate-two"
   gem.homepage = "http://github.com/marcinwyszynski/gtranslate-two"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = "Dead-simple Ruby client for Google Translate API v2"
+  gem.description = "This is a super-simple Ruby client for Google Translate API v2. You will need the developer key to work with it."
   gem.email = "marcin.pixie@gmail.com"
   gem.authors = ["Marcin Wyszynski"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
