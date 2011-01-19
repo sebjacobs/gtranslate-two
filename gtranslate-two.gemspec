@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "gtranslate-two.gemspec",
     "lib/glanguage.rb",
     "lib/gtranslate-two.rb",
     "lib/gtranslatorresult.rb",
