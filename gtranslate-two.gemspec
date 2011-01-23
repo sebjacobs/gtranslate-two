@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{gtranslate-two}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Marcin Wyszynski"]
-  s.date = %q{2011-01-19}
+  s.date = %q{2011-01-23}
   s.description = %q{This is a super-simple Ruby client for Google Translate API v2. You will need the developer key to work with it.}
   s.email = %q{marcin.pixie@gmail.com}
   s.extra_rdoc_files = [
