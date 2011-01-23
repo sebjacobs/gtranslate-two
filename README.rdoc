@@ -2,7 +2,7 @@
 
 This is a simple Ruby gem designed to use Google Translate API v2 - unlike other gems which use the first version of the API.
 
-Also unlike other available gems, this one requires the use of an API key, which you can get from the {Google APIs console} [https://code.google.com/apis/console/].
+Also unlike other available gems, this one requires the use of an API key, which you can get from the Google APIs {console} [https://code.google.com/apis/console/].
 
 == Usage
 
