@@ -14,14 +14,14 @@ Gem::Specification.new do |s|
   s.email = %q{marcin.pixie@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README"
+    "README.rdoc"
   ]
   s.files = [
     ".document",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
-    "README",
+    "README.rdoc",
     "Rakefile",
     "VERSION",
     "gtranslate-two.gemspec",
