@@ -1,4 +1,5 @@
 module GLanguage
+  
   Afrikaans	= 'af'
   Albanian = 'sq'
   Arabic = 'ar'
@@ -51,4 +52,18 @@ module GLanguage
   Vietnamese = 'vi'
   Welsh = 'cy'
   Yiddish = 'yi'
+  
+  # This method will look up a particular symbol and
+  # try to return a correspondind constant as a string
+  def self.lookup(symbol)
+    result = self.constants.select do |const|
+      eval("self::#{const}").eql?(symbol)
+    end
+    if result.empty?
+      raise NameError, "Looks like '#{symbol}' is not a symbol of a supported language"
+    else
+      result.to_s
+    end
+  end
+  
 end
