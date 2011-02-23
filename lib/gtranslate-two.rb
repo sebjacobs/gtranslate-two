@@ -39,8 +39,11 @@ class GTranslator
     
     # Step 2c: Force the HTTP client to use SSL and assign a proper certificate
     http.use_ssl = true
+    http.ssl_timeout = 2
     http.verify_mode = OpenSSL::SSL::VERIFY_PEER
-    http.ca_file = File.join(File.dirname(__FILE__), 'cacert.pem')
+    store = OpenSSL::X509::Store.new
+    store.set_default_paths
+    http.cert_store = store
     
     # Step 2d: Make an actual POST request and grab the response and it's body
     response, body = http.post(uri.path, params, { 'X-HTTP-Method-Override' => 'GET' })
@@ -56,8 +59,8 @@ class GTranslator
       #          if more than one translation has been returned
       return result.size == 1 ? result.first : result
     else
-      # Step 4b: Otherwise, return nil
-      nil
+      # Step 4b: Otherwise, return the error response (generally, a Net::HTTPBadRequest)
+      response
     end
   end
   
