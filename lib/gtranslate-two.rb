@@ -3,6 +3,7 @@ require File.join(File.dirname(__FILE__), 'glanguage')
 require 'json'
 require 'net/https'
 require 'uri'
+require 'cgi'
 
 class GTranslator
   
@@ -29,7 +30,7 @@ class GTranslator
     options[:source] = source if source
     
     # Step 1c: Serialize the hash for the POST request
-    params = URI.escape(options.collect{|k,v| "#{k}=#{v}"}.join('&'))
+    params = options.collect{|k,v| "#{k}=#{CGI.escape(v)}"}.join('&')
     
     # Step 2a: Get the Google Translate host address
     uri = URI.parse('https://www.googleapis.com/language/translate/v2')

@@ -54,7 +54,17 @@ class TestGtranslateTwo < Test::Unit::TestCase
     GTranslator.key = 'test_key'
     assert_equal GTranslator.key, 'test_key', 'Oh noes, key saved incorrectly'
   end
-  
+
+  should 'escape ampersands within the query string correctly' do
+    GTranslator.key = correct_key
+    ampersand_query = 'Hello & Good bye'
+    expected_translation = 'Hej & Farvel'
+
+    result = GTranslator.translate(ampersand_query, target, source)
+
+    assert_equal expected_translation, result.translation
+  end
+
   should 'be able to return a translation with both source and target langauge provided' do
     GTranslator.key = correct_key
     result = GTranslator.translate(query, target, source)
